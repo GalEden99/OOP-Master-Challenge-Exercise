@@ -2,21 +2,26 @@ public class Main {
 
     public static void main(String[] args) {
         Hamburger hamburger = new Hamburger("Regular", true);
-        hamburger.addition1("Lettuce", 3);
-        hamburger.addition2("Tomato", 2);
-        hamburger.addition3("carrot", 1);
-        hamburger.addition4("Pickle", 5);
+        System.out.println(hamburger.getMaxAdditions());
+        hamburger.addAdditions("Lettuce", 3);
+        hamburger.addAdditions("Tomato", 2);
+        hamburger.addAdditions("carrot", 1);
+        hamburger.addAdditions("Pickle", 5);
+        hamburger.addAdditions("Another", 5);
         hamburger.totalCost();
 
         System.out.println("-------");
 
         HealthyBurger healthyBurger = new HealthyBurger(true);
-        healthyBurger.addition1("Lettuce", 3);
-        healthyBurger.addition2("Tomato", 2);
-        healthyBurger.addition3("carrot", 1);
-        healthyBurger.addition4("Pickle", 5);
-        healthyBurger.addition5("Lettuce", 3);
-        healthyBurger.addition5("Avocado", 2);
+        System.out.println(healthyBurger.getMaxAdditions());
+        healthyBurger.addAdditions("Lettuce", 3);
+        healthyBurger.addAdditions("Tomato", 2);
+        healthyBurger.addAdditions("carrot", 1);
+        healthyBurger.addAdditions("Pickle", 5);
+        healthyBurger.addAdditions("Lettuce", 3);
+        healthyBurger.addAdditions("Avocado", 2);
+        healthyBurger.addAdditions("Avocado", 2);
+
         healthyBurger.totalCost();
 
     }

@@ -1,27 +1,14 @@
-public class HealthyBurger extends Hamburger{
+public class HealthyBurger extends Hamburger {
 
-    public HealthyBurger(boolean meat) {
-        super("Brown rye bread roll", meat);
-    }
+    private int maxAdditions;
 
-    int addition5Cost;
-    int addition6Cost;
-
-
-    public int addition5(String additionName, int amount){
-        addition5Cost = (costOfAddition(additionName))*amount;
-        System.out.println("Added "+ amount + " " + additionName + " for " + costOfAddition(additionName) + "$ each");
-        return addition5Cost;
-    }
-
-    public int addition6(String additionName, int amount){
-        addition6Cost = (costOfAddition(additionName))*amount;
-        System.out.println("Added "+ amount + " " + additionName + " for " + costOfAddition(additionName) + "$ each");
-        return addition6Cost;
+    public HealthyBurger(boolean isMeat) {
+        super("Brown rye bread roll", isMeat);
+        this.maxAdditions = 6;
     }
 
     @Override
-    public int totalCost() {
-        return (super.totalCost()+addition5Cost+addition6Cost);
+    public int getMaxAdditions() {
+        return maxAdditions;
     }
 }
