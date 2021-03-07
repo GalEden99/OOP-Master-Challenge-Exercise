@@ -21,8 +21,18 @@ public class Main {
         healthyBurger.addAdditions("Lettuce", 3);
         healthyBurger.addAdditions("Avocado", 2);
         healthyBurger.addAdditions("Avocado", 2);
-
         healthyBurger.totalCost();
+
+        System.out.println("-------");
+
+        DeluxeHamburger deluxeHamburger = new DeluxeHamburger("regular", false);
+        System.out.println(deluxeHamburger.getMaxAdditions());
+        deluxeHamburger.addAdditions("Lettuce", 3);
+        deluxeHamburger.addAdditions("Tomato", 2);
+        deluxeHamburger.addAdditions("carrot", 1);
+        deluxeHamburger.addAdditions("Pickle", 5);
+        deluxeHamburger.addAdditions("Lettuce", 3);
+        System.out.println(deluxeHamburger.totalCost());
 
     }
 }

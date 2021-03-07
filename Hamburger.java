@@ -2,7 +2,7 @@ public class Hamburger {
     private String breadRollType;
     private boolean isMeat;
     public int price;
-    private int maxAdditions;
+    protected int maxAdditions;
 
     public Hamburger(String breadRollType, boolean isMeat) {
         this.breadRollType = breadRollType;
@@ -35,7 +35,7 @@ public class Hamburger {
     }
 
     public int getMaxAdditions(){
-        return 4;
+        return this.maxAdditions;
     }
 
 
